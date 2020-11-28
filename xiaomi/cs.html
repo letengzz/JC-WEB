@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 , .div2{
+            float: left;
+            background: red;
+            width: 150px;
+            height: 100px;
+        }
+        .div2{
+            background: green;
+        }
+        .div3{
+            background: hotpink;
+        }
+        .cls::after ,  .cls::before{
+    content: "";
+    display: table;
+}
+.cls::after{
+    clear: both;
+}
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div class="">
+        <div class="div1 "></div>
+        <div class="div2 cls"></div>
+
+        <div class="div3 cls"> </div>
+    </div>
+   
+</body>
+</html>
