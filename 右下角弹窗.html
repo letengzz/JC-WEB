@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ad{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 400px;
+            height: 0;
+            border: 2px solid #000;
+        }
+        .btn{
+                position: absolute;
+                top: 0;
+                right: 0;
+                cursor: pointer;
+        }
+        .bg{
+                width: 400px;
+        }
+        /* 1 */
+    </style>
+</head>
+<body>
+    <div id="myAD" class="ad">
+        <img id="myClose" class="btn" src="../nike/弹窗/close.jpg" alt="">
+     <a href=""> <img class="bg" src="../nike/弹窗/0.jpg" alt=""></a>  
+    </div>
+
+    <script>
+        var myAD = document.getElementById("myAD");
+        var myClose = document.getElementById("myClose");
+        myClose.onclick = function(){
+            close = setInterval(adCloseFunc,3);
+        }
+        var adHeight = 0;
+        function adCloseFunc(){
+            if(adHeight > 0){
+                myAD.style.height = adHeight + "px";
+                adHeight -=2;
+            }else{
+                myAD.style.display = "none";
+                myAD.style.height = 0;
+                clearInterval(close);
+            }
+        }
+        var show = setInterval(adShowFunc,10);
+            function adShowFunc(){
+                if(adHeight <225){
+                       adHeight +=2;
+                myAD.style.height = adHeight + "px";
+                }else{
+                    myAD.style.height = "225px";
+                    adHeight = 225;
+                    clearInterval(show);
+                }
+             
+            }
+        window.onload = function(){
+            show = setInterval(adShowFunc,5);
+        }
+</script>
+</body>
+</html>
