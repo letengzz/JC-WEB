@@ -1,0 +1,216 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 12px;
+	background-color: #fafafa;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.search-box {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+}
+
+.search-box a {
+	width: 51px;
+	height: 44px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+}
+
+.search-box a::before {
+	content: '';
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url(../img/home-common-sprite2x@v7.15.png) no-repeat 1px -36px;
+	background-size: 21px auto;
+}
+
+.search-index-box {
+	background-color: #fff;
+	flex: 1;
+	height: 28px;
+	border-radius: 15px;
+	margin-left: 12px;
+}
+
+/* 顶部背景图 */
+.topbg {
+	height: 224px;
+	background: url(../img/0zg3k120008am6zu24E20.jpg) no-repeat;
+	background-size: 100%;
+	border-radius: 0 0 100px 100px / 0 0 20px 20px;
+}
+
+/* 顶部导航 */
+.local-nav {
+	list-style: none;
+	margin: -52px 12px 10px;
+	padding: 4px 0 8px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+}
+
+.local-nav li {
+	flex: 1;
+}
+
+.local-nav a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #333;
+}
+
+.local-nav li a span:first-child {
+	width: 40px;
+	height: 40px;
+
+	background: url(../img/home-fivemain-sprite2x@v7.15.png);
+	background-size: 40px auto;
+}
+
+.local-nav li:nth-child(2) a span:first-child {
+	background-position: 0 -40px;
+}
+
+.local-nav li:nth-child(3) a span:first-child {
+	background-position: 0 -80px;
+}
+
+.local-nav li:nth-child(4) a span:first-child {
+	background-position: 0 -120px;
+}
+
+.local-nav li:nth-child(5) a span:first-child {
+	background-position: 0 -160px;
+}
+
+/*
+ grid-nav
+ */
+.grid-nav {
+	margin: 0 12px 1px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.grid-nav div {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #fff;
+}
+
+.grid-nav div a {
+	font-size: 14px;
+	padding-left: 12px;
+	height: 65px;
+	line-height: 65px;
+	border-left: 1px solid #fff;
+	color: #fff;
+	background-origin: padding-box;
+}
+
+.grid-nav div a:first-child {
+	width: 31%;
+}
+
+.grid-nav div a:nth-child(2) {
+	width: 23%;
+}
+
+.grid-nav div a:nth-child(3) {
+	width: 23%;
+}
+
+.grid-nav div a:nth-child(4) {
+	width: 23%;
+}
+
+/* 第一行 */
+.grid-nav div:first-child a:nth-child(3) {
+	width: 46%;
+}
+
+.grid-nav div:nth-child(1) a:nth-child(1) {
+	background: url(../img/grid-nav-items-hotel@v7.15.png) no-repeat;
+	background-size: 73px auto;
+	background-position: bottom right;
+}
+
+.grid-nav div:nth-child(1) a:nth-child(2) {
+	background: url(../img/grid-nav-items-minsu@v7.15.png) no-repeat;
+	background-size: 73px auto;
+	background-position: bottom left;
+}
+
+.grid-nav div:nth-child(1) a:nth-child(3)>span {
+	background: url(../img/grid-nav-items-hot.png) no-repeat;
+	background-size: 100% auto;
+	background-position: bottom right;
+	background-origin: padding-box;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #a05416;
+}
+
+.grid-nav div:nth-child(1) a:nth-child(3) {
+	background: linear-gradient(to right, #ffbc49, #ffd252);
+	background-size: 100% auto;
+	background-position: bottom right;
+}
+
+.grid-nav div:first-child {
+	background: linear-gradient(to right, #fa5956, #fb8650 54%);
+}
+
+/* 第二行 */
+.grid-nav div:nth-child(2) a:nth-child(1) {
+	background: url(../img/grid-nav-items-flight@v7.15.png) no-repeat;
+	background-size: 73px auto;
+	background-position: bottom right;
+}
+
+.grid-nav div:nth-child(2) a:nth-child(2) {
+	background: url(../img/grid-nav-items-train.png) no-repeat;
+	background-size: 79px auto;
+	background-position: bottom left;
+}
+
+.grid-nav div:nth-child(2) {
+	background: linear-gradient(to right, #4b8fed, #53bced);
+}
+
+/* 第三行 */
+.grid-nav div:nth-child(3) a:nth-child(1) {
+	background: url(../img/grid-nav-items-travel@v7.15.png) no-repeat;
+	background-size: 94px auto;
+	background-position: bottom right;
+}
+
+.grid-nav div:nth-child(3) a:nth-child(2) {
+	background: url(../img/grid-nav-items-dingzhi@v7.15.png) no-repeat;
+	background-size: 61px auto;
+	background-position: bottom left;
+}
+
+.grid-nav div:nth-child(3) {
+	background: linear-gradient(to right, #34c2aa, #6cd557);
+}
