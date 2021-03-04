@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侯佳成的第一个test</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <ul class="byUl">
+        <li>liii<a href="" id="byA1">第一个li的a</a></li>
+        <li id="byLi">liii<a href="" id="byA2">第二个li的a</a></li>
+        <li>liii<a href="">第三个li的a</a></li>
+    </ul>
+    <h1>这是一个h1</h1>
+</body>
+<script>
+    //jQuery选择器
+    //所有元素设置背景色
+    $('*').css('background','hotpink');
+    //class类选择器设置背景色
+    $('.byUl').css('background','blue');
+    //id选择器设置背景色
+    $('#byLi').css('background','white');
+    //后代选择器
+    $('.byUl a').css('font-size','45px');
+    //子元素选择器 
+    // $('#dv').children('p').css('backegound','red');
+    $('.byUl>li').css('font-size','85px');
+    //相邻选择器
+    $('.byUl+h1').css('background','green');
+    //多个类选择器
+    $('#byA1,#byA2').css('background','papayawhip');
+    
+    
+</script>
+</html>
