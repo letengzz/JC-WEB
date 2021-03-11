@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <ul class="menu_list">
+        <li>
+            <p class="menu_head">目标管理</p>
+            <div class="menu_body">
+                <a href="#" class="">主题空间</a>
+                <a href="#" class="">项目任务</a>
+                <a href="#" class="">项目任务</a>
+                <a href="#" class="">时间视图</a>
+            </div>
+        </li>
+        <li>
+            <p class="menu_head">会议管理</p>
+            <div class="menu_body">
+                <a href="#" class="">主题空间</a>
+                <a href="#" class="">项目任务</a>
+                <a href="#" class="">项目任务</a>
+                <a href="#" class="">时间视图</a>
+            </div>
+        </li>
+    </ul>
+</body>
+<script>
+    $('.menu_body').hide();
+    $('.menu_head').click(function(){
+        $(this).next('div').show();
+        // $(this).parent('li').siblings('li').children('div').hide();//链式
+        var parent = $(this).parent('li');
+        var lis = parent.siblings('li');
+        lis.children('div').hide();
+    });
+</script>
+</html>

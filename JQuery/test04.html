@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+    <div class="dv">class dv</div>
+    <div title="标题" id="title">title标题</div>
+    <div title="标题1" class="dv1">dv1 标题1</div>
+    <div class="dv1" title="标题2">dv1 标题2</div>
+    <ul>
+        
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+    </ul>
+</body>
+<script>
+    $('div[class^=d]').css('background','blue');
+    $('div[class!=dv]').css('background','green');
+    $('div[class=dv1][title=标题2]').css('background','black');
+    $('div[title*=标]').css('border','5px solid #f0f');
+    $('div[class$=1]').css('width','100px');
+    $('div[id]').css('width','200px');
+    $('div[class=dv]').css('width','200px');
+    
+    $('li:first-child').css('background','maroon');
+    $('li:last-child').css('border','2px solid #f0f');
+    $('li:nth-child(6)').css('background','orange');
+    $('li:nth-child(odd)').css('background','mediumvioletred');
+    $('li:nth-child(even)').css('background','blueviolet');
+
+</script>
+</html>

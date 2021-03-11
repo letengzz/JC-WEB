@@ -13,26 +13,45 @@
         <li id="byLi">liii<a href="" id="byA2">第二个li的a</a></li>
         <li>liii<a href="">第三个li的a</a></li>
     </ul>
-    <h1>这是一个h1</h1>
+    <p class="byP">p</p>
+    <p>p</p>
+    <p>p</p>
 </body>
 <script>
     //jQuery选择器
     //所有元素设置背景色
     $('*').css('background','hotpink');
+
     //class类选择器设置背景色
     $('.byUl').css('background','blue');
+
     //id选择器设置背景色
     $('#byLi').css('background','white');
+
     //后代选择器
     $('.byUl a').css('font-size','45px');
+    $('.byUl').find('a').css('font-size','45px');
     //子元素选择器 
-    // $('#dv').children('p').css('backegound','red');
     $('.byUl>li').css('font-size','85px');
+    $('.byUl').children('li').css('font-size','85px');
+
     //相邻选择器
-    $('.byUl+h1').css('background','green');
+    $('.byUl+p').css('background','green');
+    $('.byUl').next('p').css('background','green');
+    //兄弟选择器 
+    $('.byP ~ p').css('background','blue');
+    $('.byP').nextAll('p').css('background','blue');
+    $('.byP').siblings('p').css('background','blue');
+
     //多个类选择器
     $('#byA1,#byA2').css('background','papayawhip');
-    
+
+    //元素选择器
+    $('li').css('background','red');
+
+    $(function(){
+
+    });
     
 </script>
 </html>

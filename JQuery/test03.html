@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul style="width: 200px;">
+        <li>春天摇身一变</li>
+        <li>成了有秘密的人</li>
+        <li>枯萎是花瓣的秘密</li>
+        <li>凋零时叶子的秘密</li>
+    </ul>
+    <p class="dis">p</p>
+    <p class="vis">p</p>
+    <div>diyige</div>
+    <div>第二个</div>
+    <div>
+        <span>span</span>
+    </div>
+    <div></div>
+</body>
+<script>
+    $('li:eq(0)').css('background','red');
+    $('li:first').css('background','red');
+    $('li:last').css('background','red');
+    $('li:even').css('background','pink');
+    $('li:odd').css('border','solid 1px black');
+
+    $('p:visible').css('border','solid 1px black');
+    $('li:odd').css('border','solid 1px black');
+    console.log($('p:hidden').html());
+    $('div:contains(二)').css('background','blue');
+    $('div:has(span)').css('background','pink');
+    $('div:empty').css('background','red');
+    $('div:parent').css('background','pink');
+
+</script>
+</html>
